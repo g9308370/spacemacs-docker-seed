@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+### Spacemacs Container #############################
+
+  spacemacs:
+    container_name: spacemacs
+    build:
+      context: .
+    environment:
+      - UNAME=${UNAME}
+      - UID=${UID}
+    volumes:
+      - ${WORKSPACE}:/mnt/workspace
